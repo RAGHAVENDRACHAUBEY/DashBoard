@@ -1,11 +1,18 @@
-import { BrowserRouter } from 'react-router-dom';
-import AppRoutes from './routes';
-
+import React from 'react';
+import Header from './components/Header';
+import HomePage from './components/HomePage';
+import Feature from './components/Feature';
+import Projects from './components/Projects';
 function App() {
   return (
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+    <div className="min-h-screen bg-white text-gray-800">
+      <div className="bg-cover bg-center" style={{ backgroundImage: 'url("./src/assets/Homebanner.png")' }}>
+        <Header />
+        <HomePage />
+      </div>
+      <Feature/>
+      <Projects/>
+    </div>
   );
 }
 
